@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	do {
+		var deposit = +prompt ("Введите сумму вклада");
+	} while(isNaN(deposit) || deposit < 0);
+
+		do {
+		var years = +prompt ("Введите количество лет, на которое планируете вложить деньги");
+	} while(isNaN(years) || years < 0);
+
+		do {
+		var percent = +prompt ("Введите процент (без знака), под который планируете вложить деньги");
+	} while(isNaN(percent) || percent < 0);
+
+	for (var i = 1; i <= years; i++){
+		deposit = deposit + deposit * (percent / 100);
+		document.write("Размер Вашего вклада на конец " + i + " года составит " + deposit.toFixed(2) + " рублей" + "<br />");
+	}
+</script>

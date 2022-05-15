@@ -1,0 +1,54 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	var congrats = "Поздравляю, вы угадали!"
+	var lose = "К сожалению Вы не угадали"
+	var counter = 0
+
+
+
+	var userAnswer1 = prompt("Два конца, два кольца, посредине гвоздик");
+	var riddleAnswer1 = "Ножницы"
+
+	if (userAnswer1 == riddleAnswer1 || userAnswer1 == riddleAnswer1.toUpperCase() || userAnswer1 == riddleAnswer1.toLowerCase()){
+		alert(congrats);
+		counter++;
+	}else{
+		alert(lose + ". Правильный ответ: " + riddleAnswer1);
+	}
+
+
+	var userAnswer2 = prompt("Не огонь, а жжется");
+	var riddleAnswer2 = "Крапива"
+
+	if (userAnswer2 == riddleAnswer2 || userAnswer2 == riddleAnswer2.toUpperCase() || userAnswer2 == riddleAnswer2.toLowerCase()){
+		alert(congrats);
+		counter++;
+	}else{
+		alert(lose + ". Правильный ответ: " + riddleAnswer2);
+	}
+
+
+	var userAnswer3 = prompt("Без рук, без топоренка, построена избенка");
+	var riddleAnswer3 = "Гнездо"
+
+	if (userAnswer3 == riddleAnswer3 || userAnswer3 == riddleAnswer3.toUpperCase() || userAnswer3 == riddleAnswer3.toLowerCase()){
+		alert(congrats);
+		counter++;
+	}else{
+		alert(lose + ". Правильный ответ: " + riddleAnswer3);
+	}
+
+
+	var userAnswer4 = prompt("Конь бежит, земля дрожит");
+	var riddleAnswer4 = "Гром"
+
+	if (userAnswer4 == riddleAnswer4 || userAnswer4 == riddleAnswer4.toUpperCase() || userAnswer4 == riddleAnswer4.toLowerCase()){
+		alert(congrats);
+		counter++;
+	}else{
+		alert(lose + ". Правильный ответ: " + riddleAnswer4);
+	}
+	document.write("Игра завершена. Вы дали правильных ответов: " + counter)
+</script>
+
+

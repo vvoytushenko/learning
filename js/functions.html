@@ -1,0 +1,72 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	
+// Cоздаем массив и N элементов
+	var n = +prompt ("Введите длину массива")
+
+	function massive (n) {
+		var numbers = [];
+		for(var i = 1; i <= n; i++){
+			numbers.push(i);	
+	}
+	return numbers;
+}
+	var arr = massive (n) //записываем массив в переменную
+	// document.write(arr) // выводим массив для проверки
+
+
+// Cчитаем сумму элементов массива
+	function massiveSum (n) {
+		var result = 0;
+		for(var i = 0; i <= n; i++){
+			result = result + i;	
+	}
+	return result
+}
+	// var arrSum = massiveSum (n) // записываем сумму элементов в переменную
+	// document.write(arrSum) //выводим сумму эелементов для проверки
+		
+
+// Ищем максимальный элемент массива
+	function massiveMax (n) {
+		var max = arr[0]; // берем первый элемент массива
+		for (var i = 0; i <= arr.length; i++) { // перебираем весь массив
+			// если элемент больше, чем в переменной, то присваиваем его значение переменной
+			if (max < arr[i]) 
+				max = arr[i];
+		}
+		return max
+}
+	//var arrMax = massiveMax (n) // записываем максимальный элемент в переменную
+	//document.write(arrMax) //выводим максимальный для проверки
+
+
+// Ищем минимальный элемент массива
+	function massiveMin (n) {
+		var min = arr[arr.length - 1]; // берем последний элемент массива
+		for (var i = 0; i <= arr.length; i++) { // перебираем весь массив
+			// если элемент меньше, чем в переменной, то присваиваем его значение переменной
+			if (min > arr[i]) 
+				min = arr[i];
+		}
+		return min
+}
+	//var arrMin = massiveMin (n) // записываем минимальный элемент в переменную
+	//document.write(arrMin) //выводим сумму минимальный для проверки
+
+
+// Возвращаем четные элементы массива
+	function massiveEvenNum (n) {
+		var EvenNum = [];
+			for (var i = 0; i <= arr.length; i++){
+				if (arr[i] % 2 == 0){
+					EvenNum.push(arr[i]) 
+			}
+		}
+		return EvenNum
+	}
+	var EvenNum = massiveEvenNum (n) // записываем минимальный элемент в переменную
+	document.write(EvenNum) //выводим сумму минимальный для проверки	
+
+</script>

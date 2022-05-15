@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	function guessTheRiddle(riddle, answer){
+		var userAnswer = prompt(riddle);
+		userAnswer = userAnswer.toLowerCase();
+
+		for (i = 0; i < answer.length; i++){
+			if (userAnswer == answer[i]){
+				alert("Это правильный ответ");
+				score++
+				return
+		}
+	}	
+			alert("Вы не угадали")
+	}
+
+	score = 0
+
+	guessTheRiddle("Два конца, два кольца, посредине гвоздик", ["ножницы", "ножницы2", "ножницы3"] );
+	guessTheRiddle("Не огонь, а жжется", ["крапива", "крапива2","крапива3"]);
+	guessTheRiddle("Без рук, без топоренка, построена избенка", ["гнездо", "гнездо2", "гнездо3"]);
+	guessTheRiddle("Конь бежит, земля дрожит", ["гром", "гром2", "гром3"])
+
+	alert("Вы угадали загадок: " + score)
+
+</script>
+
+
