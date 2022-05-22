@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let a = Number(prompt("Введите первое число")); // Получаем первую переменную
+        let b = Number(prompt("Введите второе число")); // Получаем вторую переменную
+
+        /*
+        1. Если две переменные больше или равны нулю, то выводим разность чисел
+        2. Если две переменные меньше нуля, то выводим произведение чисел
+        3. Если одна из переменных меньше нуля, то выводим сумму чисел
+        4. Во всех остальных случаях просим повторить попытку, т.к. это будут не числа
+        */
+        if (a >= 0 && b >= 0) {
+            result = a - b;
+            alert("Разность чисел равна " + result);
+        } else if (a < 0 && b < 0) {
+            result = a * b;
+            alert("Произведение чисел равно " + result);
+        } else if (a < 0 || b < 0) {
+            result = a + b;
+            alert("Сумма чисел равна " + result);
+        } else {
+            alert("Повторите попытку. Нужно ввести числа");
+        }
+
+    </script>
+</body>
+</html>

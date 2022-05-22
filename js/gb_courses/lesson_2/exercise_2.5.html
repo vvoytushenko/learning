@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        // Объявляем переменные
+        var a = 100;
+        var b = 10;
+        var operation = "+"
+
+        // Реализованы 4 основные арифметические функции с 2мя параметрами, которые возвращают результат
+        function addition(a, b) {return a + b}
+        function subtraction (a, b) {return a - b}
+        function multiplication (a, b) {return a * b}
+        function division (a, b) {return a / b}
+
+        /*
+        Функция с тремя параметрами: arg1, arg2, operation
+        В зависимости от переданного значения операции выполняет одну из арифметических операций (+, -, /, *)
+        Выводим полученный результат
+        */
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+            case "+":
+                return addition (a, b);
+                break;
+            case "-":
+                return subtraction (a, b);
+                break;
+            case "*":
+                return multiplication (a, b);
+                break;
+            case "/":
+                return division (a, b);
+                break;
+        }
+    }
+        alert(mathOperation(a, b, operation))
+
+    </script>
+</body>
+</html>
