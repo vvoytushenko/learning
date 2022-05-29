@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+        let userNumber = +prompt("Введите целое число от 0 до 999");
+
+        /*
+        1. Функция принимает на вход число от 0 до 999 включительно, введенное пользователем 
+        2. Декомпозирует его на разряды
+        */
+        function fromNumberToObject (arr) {
+            if (arr < 0 || arr > 999 || !Number.isInteger(arr)) {
+                console.log ("Неправильный ввод. Нужно ввести целое число от 0 до 999");
+                return {};
+            } else {
+            console.log('hundreds: ' + Math.floor(arr / 100)); // Это сотни
+            console.log('tens: ' + Math.floor((arr / 10) % 10)); // Это десятки
+            console.log('units: ' + Math.floor(arr % 10)); // Это единицы
+        }
+    };
+        fromNumberToObject(userNumber);
+        
+    </script>
+</body>
+</html>
