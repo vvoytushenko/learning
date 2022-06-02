@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        /*
+        1. Спрашиваем у пользователя кол-во денег, которое он хочет положить на счет
+        2. Создаем массив для склонений
+        3. Объявляем функцию, которая в зависимости от введенной суммы выбирает правильное склонение
+        4. Выводим результат
+        */
+        let amount = prompt("Укажите сумму, которую вы хотели бы положить на счет")
+        let sklonenie = ["рубль", "рубля", "рублей"]
+
+
+        var numToStr = function(amount, sklonenie) {
+            if (amount % 10 === 1 && amount % 100 !== 11) { 
+                return sklonenie[0];
+            } else if (amount % 10 >= 2 && amount % 10 <= 4 && (amount % 100 < 10 || amount % 100 >= 20)) {
+                return sklonenie[1];            
+            }
+                return sklonenie[2];
+            }
+        alert("Ваша сумма в " + amount + " " + numToStr(amount, sklonenie) + " успешно зачислена.")
+
+    </script>
+</body>
+</html>
