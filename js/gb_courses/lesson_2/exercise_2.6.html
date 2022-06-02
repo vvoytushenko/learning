@@ -20,7 +20,7 @@
         let sklonenie = ["рубль", "рубля", "рублей"]
 
 
-        var numToStr = function(amount, sklonenie) {
+        let numToStr = function(amount, sklonenie) {
             if (amount % 10 === 1 && amount % 100 !== 11) { 
                 return sklonenie[0];
             } else if (amount % 10 >= 2 && amount % 10 <= 4 && (amount % 100 < 10 || amount % 100 >= 20)) {

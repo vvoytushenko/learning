@@ -10,9 +10,9 @@
     <script>
         'use strict';
         // Объявляем переменные
-        var a = 100;
-        var b = 10;
-        var operation = "+"
+        let a = 100;
+        let b = 10;
+        let operation = "+"
 
         // Реализованы 4 основные арифметические функции с 2мя параметрами, которые возвращают результат
         function addition(a, b) {return a + b}
@@ -29,16 +29,12 @@
             switch (operation) {
             case "+":
                 return addition (a, b);
-                break;
             case "-":
                 return subtraction (a, b);
-                break;
             case "*":
                 return multiplication (a, b);
-                break;
             case "/":
                 return division (a, b);
-                break;
         }
     }
         alert(mathOperation(a, b, operation))
