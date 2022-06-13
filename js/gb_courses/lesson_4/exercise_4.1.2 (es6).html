@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+        //es6
+        //Создаем конструктор Post, который принимает на вход: author, text, date
+        class Post {
+            constructor (author, text, date) {
+                this.author = author;
+                this.text = text;
+                this.date = date;
+            }
+            //Создаем метод Edit для Post
+            edit (inputText) {
+                this.text = inputText;
+            }
+        }
+
+        // Выводим результат
+        const obj1 = new Post ('Random author', "Random text", 'Random date');
+        console.log(obj1);
+        obj1.edit('New Random Text');
+        console.log(obj1);
+
+
+         /*
+        Создаем конструктор AttachedPost, который:
+        1. Наследует параметры и методы от Post
+        2. Принимает на вход highlighted
+        */  
+        class AttachedPost extends Post {
+            constructor (author, text, date, highlighted) {
+                super(author, text, date);
+                this.highlighted = highlighted;
+            }
+
+        // Создаем метод makeTextHighlighted для AttachedPost
+            makeTextHighlighted (HighlightedText) {
+                this.highlighted = true;
+            }
+        }
+        // Выводим результат
+        const obj2 = new AttachedPost ('Random author', 'Random text', 'Random date', false);
+        console.log(obj2);
+        obj2.edit('New Random Text');
+        obj2.makeTextHighlighted(true);
+        console.log(obj2);
+
+    </script>
+</body>
+</html>
