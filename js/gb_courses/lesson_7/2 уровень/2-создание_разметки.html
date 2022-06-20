@@ -19,13 +19,14 @@
         ниже:
         <img src="https://picsum.photos/200/300?random=${счетчик_цикла_здесь}" alt="pic${счетчик_цикла_здесь}">
         */
-       'use strict'
+    'use strict'
 
-       jpgCount = 6
+    let jpgCount = 6
 
-       for (let i = 1; i < jpgCount; i++) {
-        body.insertAdjacentHTML('afterbegin', `<img src="https://picsum.photos/200/300?random=${i}" alt="pic${i}">`)
-       }
+    for (let i = 1; i < jpgCount; i++) {
+        let markup = `<img src="https://picsum.photos/200/300?random=${i}" alt="pic${i}">`;
+        document.body.insertAdjacentHTML('afterbegin', markup);
+    }
     </script>
 </body>
 </html>

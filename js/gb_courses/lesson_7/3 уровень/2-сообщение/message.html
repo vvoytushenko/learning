@@ -32,11 +32,11 @@
         let audioElement = new Audio('notification.mp3')
         let button = document.querySelector('button')
 
-        button.addEventListener('click', function(event) {
-            let msgHeight = msg.clientHeight;
+        button.addEventListener('click', function() {
             msg.style.transform = `translateY(-220px)`;
             audioElement.play();
         })      
+
     </script>
 </body>
 
